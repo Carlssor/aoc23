@@ -11,7 +11,6 @@ def solve(puzzle_input: list[str]) -> int:
     hands_by_strength = sort_hands(list(bids.keys()))
     amount_hands = len(bids)
     for hand, rank in zip(hands_by_strength, range(amount_hands, 0, -1)):
-        print(hand._cards, rank)
         result += bids[hand] * rank
     return result
 
